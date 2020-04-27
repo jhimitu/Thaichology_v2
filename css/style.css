@@ -19,6 +19,15 @@ header {
     background: #fff;
 }
 
+.container {
+    display: grid;
+    gap: 30px;
+}
+
+.mobile-menu-icon, .closebtn {
+    visibility: hidden;
+}
+
 .menu-container {
     width: 1280px;
     margin: auto;
@@ -40,6 +49,10 @@ header {
     padding-left: 10px;
 }
 
+.logo-mobile {
+    display: none;
+}
+
 .tab-content {
     grid-column: 3;
     list-style: none;
@@ -58,15 +71,31 @@ header {
     color: #000;
 }
 
+.tab-content li a::before {
+    content: '';
+    display: block;
+    height: 3px;
+    background: #000;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    transform-origin: left;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 500ms;
+}
+
+.tab-content li a:hover::before {
+    transform: scale(1, 1);
+}
+
 .info {
-    padding: 50px;
-    margin: 50px;
+    padding: 60px;
 }
 
 .gallery {
     grid-template-columns: repeat(9, 1fr);
     grid-auto-rows: minmax(150px, auto);
-    /* grid-gap: 5px; */
     display: grid;
     margin: 0 auto;
 }
@@ -124,5 +153,84 @@ header {
 @media screen and (max-width: 650px) {
     .gallery {
         display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-checkbox {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.9);
+        overflow: hidden;
+        transition: 0.5s;
+        display: block;
+    }
+
+    .tab-content li {
+        display: block;
+        font-size: 36px;
+        padding: 20px 0px;
+    }
+
+    .tab-content li a {
+        color: #818181;
+    }
+
+    .nav-checkbox .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+        padding: 0;
+        text-decoration: none;
+        font-size: 36px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .nav-checkbox a:hover, .nav-checkbox a:focus {
+        color: #f1f1f1;
+      }
+
+      .tab-content li a::before {
+        content: '';
+        display: block;
+        height: 3px;
+        background: #fff;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        right: 0;
+        transform-origin: left;
+        transform: scale(0, 1);
+        transition: transform ease-in-out 500ms;
+    }
+
+    .logo {
+        visibility: hidden;
+    }
+
+    .logo-mobile {
+        display: block;
+    }
+
+    .logo-mobile img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    .mobile-menu-icon, .closebtn {
+        visibility: visible;
+    }
+
+    .info {
+        padding: 0px;
     }
 }
