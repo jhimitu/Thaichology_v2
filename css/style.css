@@ -43,7 +43,6 @@ html, body {
 	border: none;
 }
 
-
 a {
     cursor: pointer;
 }
@@ -66,7 +65,7 @@ header {
 }
 
 .menu-container {
-    width: 1280px;
+    width: 100%;
     margin: auto;
 }
 
@@ -83,7 +82,8 @@ header {
 }
 
 .logo {
-    padding-left: 10px;
+    padding-left: 0px;
+    width: 225px;
 }
 
 .logo-mobile {
@@ -127,7 +127,7 @@ header {
 }
 
 .info {
-    padding: 60px;
+    padding: 10px;
 }
 
 .gallery {
@@ -185,6 +185,66 @@ header {
 .gallery-item-8 {
     grid-column: span 3;
     grid-row: span 2;
+}
+
+.footer {
+    margin-bottom: 20px;
+}
+
+input [type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    /* border-radius: 4px; */
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    /* background-color: #ccc; */
+    color: #777;
+    padding: 20px 30px;
+    border-color: #ccc;
+    font-size: 14px;
+    /* border-radius: 4px; */
+    cursor: pointer;
+}
+
+.contact-container {
+    max-width: 800px;
+    height: 600px;
+    margin: 50px auto;
+    box-sizing: border-box;
+    padding: 40px;
+}
+
+.input, .message, .text-area {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    font-size: 14px;
+    outline: none;
+}
+
+.message {
+    padding: 0;
+}
+
+.sender-info .input {
+    width: 48%;
+    float: left;
+    margin-right: 4%;
+}
+
+.sender-info .input:last-child {
+    margin-right: 0;
+}
+
+.message .text-area {
+    height: 200px;
 }
 
 @media screen and (max-width: 650px) {
@@ -269,5 +329,11 @@ header {
 
     .info {
         padding: 0px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .menu-container {
+        width: 100%;
     }
 }
