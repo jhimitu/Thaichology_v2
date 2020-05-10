@@ -99,8 +99,6 @@ header {
 
 .tab-content li {
     display: inline-block;
-    /* padding-right: 10px; */
-    /* padding: 0px 3px; */
     text-transform: lowercase;
 }
 
@@ -214,7 +212,6 @@ input [type=text], select, textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
-    /* border-radius: 4px; */
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
@@ -222,12 +219,10 @@ input [type=text], select, textarea {
 }
 
 input[type=submit] {
-    /* background-color: #ccc; */
     color: #777;
     padding: 20px 30px;
     border-color: #ccc;
     font-size: 14px;
-    /* border-radius: 4px; */
     cursor: pointer;
 }
 
