@@ -261,6 +261,12 @@ input[type=submit] {
     height: 200px;
 }
 
+.contact {
+    padding-top: 250px;
+    padding-bottom: 50px;
+    height: 50vh;
+}
+
 .about-content {
     margin: auto;
     padding: 15px;
@@ -268,6 +274,7 @@ input[type=submit] {
 
 .about-me-image {
     width: 400px;
+    margin: auto;
 }
 
 .about-me-text {
@@ -287,6 +294,10 @@ input[type=submit] {
 @media screen and (max-width: 650px) {
     .gallery {
         display: block;
+    }
+
+    .about-me-image {
+        width: 100%;
     }
 }
 
@@ -366,6 +377,17 @@ input[type=submit] {
 
     .info {
         padding: 0px;
+    }
+
+    .about-me-image {
+        width: 100%;
+    }
+
+    .contact {
+        width: 75%;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 80px;
     }
 }
 
