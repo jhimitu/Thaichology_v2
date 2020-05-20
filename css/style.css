@@ -299,6 +299,7 @@ input[type=submit] {
     .about-me-image {
         width: 100%;
     }
+    
 }
 
 @media screen and (max-width: 768px) {
@@ -324,6 +325,19 @@ input[type=submit] {
 
     .tab-content li a {
         color: #818181;
+    }
+
+    .tab-content .tab::before {
+        background: none;
+    }
+    
+    .tab-content .tab:hover::before {
+        transform: scale(1, 1);
+    }
+    
+    .selected{
+        padding-bottom: 2px;
+        border-bottom: none;
     }
 
     .nav-checkbox .closebtn {
@@ -388,6 +402,7 @@ input[type=submit] {
         text-align: center;
         margin: 0 auto;
         padding-top: 80px;
+        padding-bottom: 10px;
     }
 }
 
